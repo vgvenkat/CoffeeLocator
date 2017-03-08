@@ -10,8 +10,8 @@
     Hello Knockout!
     <div class="container">
         <div class="nav">
-            <input type="text">
-            <ul data-bind="foreach: ViewModel.coffeeList">
+            <input type="text" data-bind="textInput: coffeeInput">
+            <ul data-bind="foreach: filteredCoffeeList">
                 <li data-bind="text: name"></li>
             </ul>
         </div>
