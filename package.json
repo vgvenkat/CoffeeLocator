@@ -1,0 +1,17 @@
+{
+  "name": "neighbourmap",
+  "version": "1.0.0",
+  "description": "Neighbourhood map with Google Maps and Knockoutjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vgvenkat <vgkrish619@gmail.com> (http://vgvenkataraman.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "2.18.8",
+    "gulp": "3.9.1",
+    "gulp-connect": "5.0.0",
+    "knockout": "3.4.1"
+  }
+}
