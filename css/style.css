@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+}
+ #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }

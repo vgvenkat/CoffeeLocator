@@ -13,5 +13,8 @@
     "gulp": "3.9.1",
     "gulp-connect": "5.0.0",
     "knockout": "3.4.1"
+  },
+  "dependencies": {
+    "rapidapi-connect": "0.0.2"
   }
 }
