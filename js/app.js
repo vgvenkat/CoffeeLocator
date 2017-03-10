@@ -19,12 +19,12 @@ function initMap() {
         center: SFO
 
     });
-    // var marker = new google.maps.Marker({
-    //     position: SFO,
-    //     map: map,
-    //     animation: google.maps.Animation.DROP
-    // });
-    // marker.addListener('click', toggleBounce);
+   google.maps.event.addDomListener(window, "resize", function() {
+			var center = map.getCenter();
+			google.maps.event.trigger(map, "resize");
+			map.setCenter(center);
+		});
+	
 
     
 }
@@ -128,7 +128,12 @@ var ViewModel = function () {
 
 
     }
-
+ this.toggleList = function() {
+     var nav = $('.nav'),
+        navWidth = nav.width();
+        nav.toggleClass('toggle');
+       
+    };
     this.coffeeInput.subscribe(this.filterInput)
 }
 ko.applyBindings(new ViewModel());

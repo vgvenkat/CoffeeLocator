@@ -9,13 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <h1 class="title">Hello Knockout!</h1>
-        <input class="searchBox" type="text" data-bind="textInput: coffeeInput" placeholder="  search">
+        <h1 class="title">Top 10 SF Coffee</h1>
+         <div class="list-button-container">
+            <span class="list-button" data-bind="click: toggleList"><i class="fa fa-bars"></i>
+            </span>
+            <input class="searchBox" type="text" data-bind="textInput: coffeeInput" placeholder="  search">
+        </div>
+        
     </header>
     <div class="container">
+        
         <div class="nav">
             
             <ul data-bind="foreach: filteredCoffeeList">

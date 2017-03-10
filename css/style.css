@@ -42,3 +42,29 @@ li{
         height: 800px;
         background-color: grey;
       }
+  .nav{
+    display: none;
+  }
+  .nav.toggle{
+    display: block;
+  }
+@media only screen and (min-width: 1051px) {
+    .nav {
+        display: block;
+        width: 15%;
+        height: 90%;
+        border-radius: 5px;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    /*.search-container input {
+        width: 99%;
+    }*/
+
+    .list-button-container .list-button {
+        display: none;
+    }
+}
