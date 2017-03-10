@@ -18,6 +18,7 @@
             <span class="list-button" data-bind="click: toggleList"><i class="fa fa-bars"></i>
             </span>
             <input class="searchBox" type="text" data-bind="textInput: coffeeInput" placeholder="  search">
+            <p data-bind="visible:dataSuccess" class="error">Data Currently unavailable</p>
         </div>
         
     </header>
@@ -26,7 +27,7 @@
         <div class="nav">
             
             <ul data-bind="foreach: filteredCoffeeList">
-                <li data-bind="text: venue.name" data-bind="click: $parent.selectLocation"></li>
+                <li data-bind="text: name, click: $parent.clickCoffee"></li>
             </ul>
         </div>
         
