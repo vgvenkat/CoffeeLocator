@@ -128,6 +128,9 @@ var ViewModel = function () {
 
 
     }
+    this.clickCoffee = function(){
+        
+    }
  this.toggleList = function() {
      var nav = $('.nav'),
         navWidth = nav.width();

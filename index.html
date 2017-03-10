@@ -26,7 +26,7 @@
         <div class="nav">
             
             <ul data-bind="foreach: filteredCoffeeList">
-                <li data-bind="text: venue.name"></li>
+                <li data-bind="text: venue.name" data-bind="click: $parent.selectLocation"></li>
             </ul>
         </div>
         
