@@ -23,6 +23,7 @@ function mapError() {
     .append("<p class='error'>Error Loading Google Maps</p>");
 }
 function toggleBounceAndInfo(marker) {
+   
   if (marker.marker.getAnimation() !== null) {
     marker.marker.setAnimation(null);
     marker.infowindow.close();
@@ -32,7 +33,7 @@ function toggleBounceAndInfo(marker) {
     setTimeout(function () {
       marker.marker.setAnimation(null);
       marker.infowindow.close();
-    }, 5000);
+    }, 3500);
   }
 }
 var Marker = function (lat, lng, name, address, rating, photoUrl) {
@@ -67,6 +68,9 @@ var ViewModel = function () {
       var location = venue.location;
       var marker = new Marker(location.lat, location.lng, venue.name, location.address, venue.rating, photoUrl);
       google.maps.event.addListener(marker.marker, 'click', function () {
+           if (infowindow) {
+        infowindow.close();
+    }
         toggleBounceAndInfo(marker);
       });
       self.markerList.push(marker);
@@ -92,6 +96,7 @@ var ViewModel = function () {
     });
   };
   self.clickCoffee = function (item) {
+      
     toggleBounceAndInfo(item);
   };
   this.toggleList = function () {
