@@ -19,13 +19,13 @@
             </span>
             <input class="searchBox" type="text" data-bind="textInput: coffeeInput" placeholder="  search">
             <p data-bind="visible:dataSuccess" class="error">Data Currently unavailable</p>
-           
+           <p data-bind="visible:mapSuccess" class='error'>Error Loading Google Maps</p>
         </div>
         
     </header>
     <div class="container">
         
-        <aside class="nav">
+        <aside class="nav" data-bind="css:{toggle: classToggle}">
             
             <ul data-bind="foreach: filteredCoffeeList">
                 <li data-bind="text: name, click: $parent.clickCoffee"></li>
